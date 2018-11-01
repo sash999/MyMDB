@@ -201,7 +201,7 @@ CREATE TABLE `core_movie` (
   `runtime` int(10) unsigned NOT NULL,
   `website` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -210,7 +210,7 @@ CREATE TABLE `core_movie` (
 
 LOCK TABLES `core_movie` WRITE;
 /*!40000 ALTER TABLE `core_movie` DISABLE KEYS */;
-INSERT INTO `core_movie` VALUES (1,'Sleuth','An snobbish writer who loves games invites his wife\'s lover for a battle of wits.',1972,0,138,''),(2,'Фильи 1','Описание фильма 1',1999,0,130,'www.ya.ru');
+INSERT INTO `core_movie` VALUES (1,'Sleuth','An snobbish writer who loves games invites his wife\'s lover for a battle of wits.',1972,0,138,''),(2,'Фильм 1','Описание фильма 1',1999,2,130,'http://www.ya.ru'),(3,'Фильм 2','Описание фильма 2',2002,1,98,''),(4,'Run Lola Run','Lola runs',203,2,108,''),(5,'Film3','Film3 description',2000,0,90,''),(7,'Film3','Film3 description',2001,0,91,''),(8,'Film4','Film4 description',2010,0,900,''),(9,'Film5','Film4 description',2011,0,100,''),(10,'Film6','Film6 description',2001,0,101,''),(11,'Film7','Film7 description',2003,0,111,''),(12,'Film8','Film8 description',2007,0,11,'');
 /*!40000 ALTER TABLE `core_movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,6 +244,7 @@ CREATE TABLE `django_admin_log` (
 
 LOCK TABLES `django_admin_log` WRITE;
 /*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+INSERT INTO `django_admin_log` VALUES (1,'2018-10-31 13:11:07.429881','2','Фильм 1 (1999)',2,'[{\"changed\": {\"fields\": [\"ratings\", \"website\"]}}]',1,1),(2,'2018-11-01 07:56:03.718411','3','Фильм 2 (2002)',1,'[{\"added\": {}}]',1,1),(3,'2018-11-01 07:56:51.243187','4','Run Lola Run (203)',1,'[{\"added\": {}}]',1,1);
 /*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -334,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-31 12:41:08
+-- Dump completed on 2018-11-01 12:25:46
